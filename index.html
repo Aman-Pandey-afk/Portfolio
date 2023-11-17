@@ -3,38 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="Resources/Slytherin.jpg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./glow.css">
     <title>My Portfolio</title>
+    <script type="module" src="./index.js"></script>
   </head>
   <body>
     
     <canvas id="bg"></canvas>
 
 
-
     <main>
 
-      <section class="left" >
-        <div class="nav">
-          <div class="navItem">
+      <section>
+        <div class="mynav">
             <a href="https://github.com/Aman-Pandey-afk" target="_blank">GitHub</a>
-          </div>
-          <div class="navItem">
             <a href="https://aman-pandey-afk.itch.io/" target="_blank">Itch.io</a>
-          </div>
-          <div class="navItem">
             <a href="https://www.linkedin.com/in/aman-pandey-b5b364213/" target="_blank">LinkedIn</a>
-          </div>
-          <div class="navItem">
             <a href="https://codeforces.com/profile/TheWeeknd" target="_blank">Codeforces</a>
-          </div>
-          <div class="navItem">
             <a href="https://www.codechef.com/users/starboy24" target="_blank">Codechef</a>
-          </div>
-          <div class="navItem">
+            <a href="./Resources/Resume.pdf" target="_blank">Resume</a>
+        </div>
+        <div class="topnav">
+          <div id="myLinks">
+            <a href="https://github.com/Aman-Pandey-afk" target="_blank">GitHub</a>
+            <a href="https://aman-pandey-afk.itch.io/" target="_blank">Itch.io</a>
+            <a href="https://www.linkedin.com/in/aman-pandey-b5b364213/" target="_blank">LinkedIn</a>
+            <a href="https://codeforces.com/profile/TheWeeknd" target="_blank">Codeforces</a>
+            <a href="https://www.codechef.com/users/starboy24" target="_blank">Codechef</a>
             <a href="./Resources/Resume.pdf" target="_blank">Resume</a>
           </div>
+          <a href="javascript:void(0);" class="icon" id="icon">
+            <i class="fa fa-bars"></i>
+          </a>
         </div>
       </section>
 
@@ -50,43 +53,35 @@
       </blockquote>
 
       <section>
-        <h2>Projects</h2>
-
+      
+      <h2 class="head_name">Projects</h2>
+      <div class="container">
         <div class="box">
+          <div class="gbox glowing">
+            <img src="Resources/Mitacs.png" alt="">
+            <a href="https://aman-pandey-afk.itch.io/enemys-aid" target="_blank">
+              <div class="head">Mitacs</div>
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="gbox glowing">
+            <img src="Resources/GSoC.png" alt="">  
+            <a href="https://aman-pandey-afk.itch.io/enemys-aid" target="_blank">
+              <div class="head">Google Summer of Code</div>
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="gbox glowing">
             <img src="Resources/EA.png" alt="">
             <a href="https://aman-pandey-afk.itch.io/enemys-aid" target="_blank">
               <div class="head">Enemy's Aid</div>
             </a>
-            <br>
-            A 2D battle game in Unity Game Engine with three finite levels <br>
-            (Submission for Global Game Jam)   
+          </div>
         </div>
-
-        <br>
-
-        <div class="box">
-          <img src="Resources/BB.png" alt="">
-          <a href="https://aman-pandey-afk.itch.io/binary-bugs" target="_blank">
-            <div class="head">Binary Bugs </div>
-          </a>
-          <br>
-          A decimal to binary decoding puzzle game in Unity Game Engine <br>
-          (Submission for GitHub Game Off Game Jam)   
-      </div>
-
-      <br>
-
-      <div class="box">
-        <img src="Resources/QCLogo.png" alt="">
-        <a href="https://qcgiitr.github.io/" target="_blank"><div class="head"> Quantum Computing Group, IITR Website</div> </a>
-        <br>
-        <p> HTML, CSS based website with basic JS implementation  </p> 
-    </div>
-
       </section>
 
     </main>
-
-    <script type="module" src="./index.js"></script>
   </body>
 </html>

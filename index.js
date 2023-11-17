@@ -1,26 +1,24 @@
-//import './style.css'
-
 import * as THREE from "https://unpkg.com/three@0.127.0/build/three.module.js";
 
 import {OrbitControls} from "https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js";
 
 
-const scene = new THREE.Scene();
-
-const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
-
 const renderer = new THREE.WebGLRenderer({
   canvas : document.querySelector('#bg'),
 })
 
+const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+
+const scene = new THREE.Scene();
+
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth,window.innerHeight);
+// renderer.setSize(window.innerWidth,window.innerHeight);
 
 camera.position.setZ(30);
 
 renderer.render(scene,camera);
 
-const geometry = new THREE.RingGeometry(0,5,32);
+const geometry = new THREE.RingGeometry(0,7,32);
 const material = new THREE.MeshStandardMaterial({color: 0x651FFF});
 const ring = new THREE.Mesh(geometry,material);
 
@@ -64,9 +62,26 @@ function moveCamera()
 
 document.body.onscroll = moveCamera;
 
+function resizeRendererToDisplaySize(renderer) {
+  const canvas = renderer.domElement;
+  const width = canvas.clientWidth;
+  const height = canvas.clientHeight;
+  const needResize = canvas.width !== width || canvas.height !== height;
+  if (needResize) {
+    renderer.setSize(width, height, false);
+  }
+  return needResize;
+}
+
 function animate()
 {
   requestAnimationFrame(animate);
+
+  if (resizeRendererToDisplaySize(renderer)) {
+    const canvas = renderer.domElement;
+    camera.aspect = canvas.clientWidth / canvas.clientHeight;
+    camera.updateProjectionMatrix();
+  }
 
   ring.rotation.x += 0.01;
   ring.rotation.y += 0.01;
@@ -78,6 +93,19 @@ function animate()
 }
 
 animate();
+
+window.onload = function(){
+  document.getElementById('icon').addEventListener('click',toggleNav);
+
+  function toggleNav() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+}
 
 
 

@@ -16,6 +16,20 @@ canvas {
   font-style: normal;
 }
 
+img{
+  width: 315px;
+  height: 250px;
+}
+
+#bg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+a{
+  text-decoration: none;
+}
 
 main {
   width: 100vw;
@@ -27,7 +41,6 @@ main {
   padding: 0px 0px;
   
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
 }
 
 h1, h2, h3, blockquote {
@@ -41,18 +54,18 @@ canvas {
   left: 0;
 }
 
-
-
   header {
     background: var(--dark-bg);
     grid-column: 2 / span 5;
     font-size: 2.5rem;
     padding: 2rem;
+    margin-left: 2cm;
+    width: 60%;
     margin-bottom: var(--spacing);
   }
 
   section {
-    grid-column: 2 / 12;
+    grid-column: 2 / 15;
     padding: 1rem;
     font-size: 1.25rem;
     line-height: 1.5;
@@ -60,28 +73,52 @@ canvas {
   }
 
   blockquote {
-    margin: 0;
-    padding: 0;
-    grid-column: 4 / span 8;
+    grid-column: 6 / span 8;
+    width: 80%;
     margin-bottom: var(--spacing);
   }
 
   blockquote p {
     color: rgb(3, 5, 59);
+    padding: 20px;
     background-color: white;
     font-size: 3rem;
   }
 
-  .left {
-    grid-column: 5 / 12;
+  .topnav {
+    display: none;
+    width: 85%;
+    margin-right: 0.7cm;
+    float: right;
+    position: relative;
+  }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
-  .navItem > a {
-    text-decoration: none;
+  .mynav> a {
+    padding-left: 25px;
+    padding-right: 25px;
   } 
 
   a:link{
-    color: rgb(63, 240, 18);
+    color: white;
   }
 
   a:visited{
@@ -92,29 +129,52 @@ canvas {
     color: rgb(240, 18, 85);
   }
 
-  .nav {
-      display: flex;
-      flex-direction: row;
+  .mynav {
+      overflow: hidden;  
+      float: right;
   }
 
-  .navItem{
-    padding-left: 25px;
-    padding-right: 25px;
+  .container{
+    display: flex;
+    flex-wrap: wrap;   
+    margin: 1cm 1.5cm;
+  }
+
+  .head_name{
+    margin: 0rem 1cm;
   }
 
   .box{
-    border-top-left-radius: 30px;
-    padding-left: 70px;
-    background: rgba(9, 11, 61, 0.85);
+    flex: 1 1 30%;
+    padding-top: 10px;
   }
 
   .head {
       font-size: 30px;
+      text-align: center;
+      background-color: rgba(3, 5, 59, 0.85);
   }
 
-  .box img{
-    float: right;
-    width: 17.5%;
-    height: 17.5%;
+  @media only screen and (max-width: 1183px) {
+    .box{
+      flex: 1 1 50%;
+    }
+  }
+
+  @media only screen and (max-width: 832px) {
+    .box{
+      flex: 1 1 100%;
+    }
+    blockquote{
+      grid-column: 2 / span 5;
+      margin-left: 2.1cm;
+      width: 70%;
+    }
+    .topnav{
+      display: block;
+    }
+    .mynav{
+      display: none;
+    }
   }
   
