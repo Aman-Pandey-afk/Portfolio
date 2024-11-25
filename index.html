@@ -1,87 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="Resources/Slytherin.jpg" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./glow.css">
-    <title>My Portfolio</title>
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Aman Pandey</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
     <canvas id="bg"></canvas>
 
+    <nav class="mynav">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="https://github.com/aman-pandey-afk">GitHub</a>
+            <a href="https://aman-pandey-afk.itch.io/">Itch.io</a>
+            <a href="https://www.linkedin.com/in/aman-pandey-afk/">LinkedIn</a>
+            <a href="https://codeforces.com/profile/TheWeeknd">Codeforces</a>
+        </div>
+    </nav>
 
     <main>
-
-      <section>
-        <div class="mynav">
-            <a href="https://github.com/Aman-Pandey-afk" target="_blank">GitHub</a>
-            <a href="https://aman-pandey-afk.itch.io/" target="_blank">Itch.io</a>
-            <a href="https://www.linkedin.com/in/aman-pandey-b5b364213/" target="_blank">LinkedIn</a>
-            <a href="https://codeforces.com/profile/TheWeeknd" target="_blank">Codeforces</a>
-            <a href="https://www.codechef.com/users/starboy24" target="_blank">Codechef</a>
-            <a href="./Resources/Resume.pdf" target="_blank">Resume</a>
+        <div class="hero-section">
+            <header>
+                <h1 class="greeting">Hi, I'm</h1>
+                <h1 class="name">Aman Pandey</h1>
+            </header>
         </div>
-        <div class="topnav">
-          <div id="myLinks">
-            <a href="https://github.com/Aman-Pandey-afk" target="_blank">GitHub</a>
-            <a href="https://aman-pandey-afk.itch.io/" target="_blank">Itch.io</a>
-            <a href="https://www.linkedin.com/in/aman-pandey-b5b364213/" target="_blank">LinkedIn</a>
-            <a href="https://codeforces.com/profile/TheWeeknd" target="_blank">Codeforces</a>
-            <a href="https://www.codechef.com/users/starboy24" target="_blank">Codechef</a>
-            <a href="./Resources/Resume.pdf" target="_blank">Resume</a>
+
+        <div class="description-section">
+            <section class="description">
+                <p>I do game development, web development, competitive programming and am a physics enthusiast. I also like playing video games.</p>
+            </section>
+        </div>
+
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Current Work</h2>
+            </div>
+            <div class="section-content">
+                <div class="work-item">
+                    <h3>Software Engineer</h3>
+                    <p>Convai Technologies</p>
+                    <p>June, 2024 - Present</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-container">
+          <div class="section-header">
+              <h2>Open Source Contributon</h2>
           </div>
-          <a href="javascript:void(0);" class="icon" id="icon">
-            <i class="fa fa-bars"></i>
-          </a>
-        </div>
-      </section>
-
-
-      <header>
-        <p>Hi, I'm</p>
-        <h1>Aman Pandey</h1>
-      </header>
-
-
-      <blockquote>
-        <p>I do game development, web development, competitive programming and am a physics enthusiast. I also like playing video games. </p>
-      </blockquote>
-
-      <section>
-      
-      <h2 class="head_name">Projects</h2>
-      <div class="container">
-        <div class="box">
-          <div class="gbox glowing">
-            <img src="Resources/Mitacs.png" alt="">
-            <a href="https://aman-pandey-afk.itch.io/enemys-aid" target="_blank">
-              <div class="head">Mitacs</div>
-            </a>
+          <div class="section-content">
+              <div class="work-item">
+                  <h3>Google Summer of Code Contributor</h3>
+                  <p>OpenAstronomy</p>
+                  <p>2022</p>
+              </div>
           </div>
-        </div>
-        <div class="box">
-          <div class="gbox glowing">
-            <img src="Resources/GSoC.png" alt="">  
-            <a href="https://aman-pandey-afk.itch.io/enemys-aid" target="_blank">
-              <div class="head">Google Summer of Code</div>
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="gbox glowing">
-            <img src="Resources/EA.png" alt="">
-            <a href="https://aman-pandey-afk.itch.io/enemys-aid" target="_blank">
-              <div class="head">Enemy's Aid</div>
-            </a>
-          </div>
-        </div>
-      </section>
+      </div>
 
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Internships</h2>
+            </div>
+            <div class="section-content">
+                <div class="internship-item">
+                    <h3>Research Intern</h3>
+                    <p>MITACS Globalink Research Internship</p>
+                    <p>2023</p>
+                </div>
+                <div class="internship-item">
+                    <h3>Senior Developer</h3>
+                    <p>Spark Internship Programme Website, IIT Roorkee</p>
+                    <p>2023</p>
+                </div>
+                <div class="internship-item">
+                    <h3>Unity Intern</h3>
+                    <p>CogXR Labs</p>
+                    <p>2022</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Projects</h2>
+            </div>
+            <div class="section-content">
+                <div class="project-item">
+                    <h3><a href="https://aman-pandey-afk.itch.io/enemys-aid">Enemy's Aid</a></h3>
+                    <p>Global Game Jam, 2022</p>
+                </div>
+                <div class="project-item">
+                    <h3>Productivity Launcher</h3>
+                    <p>MDG Space</p>
+                </div>
+            </div>
+        </div>
     </main>
-  </body>
+
+    <script type="module" src="main.js"></script>
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
 </html>
